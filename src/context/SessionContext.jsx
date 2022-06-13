@@ -71,6 +71,24 @@ export const SessionProvider = ({ children }) => {
     }
   };
 
+  const passwordRecovery = async (email) => {
+    try {
+      const { data } = await api.post("/recover", { email });
+      alert(data?.message);
+    } catch (err) {
+      return err?.response?.data?.error;
+    }
+  };
+
+  const changePassword = async (password, id) => {
+    try {
+      const { data } = await api.patch(`/recover/${id}`, { password });
+      alert(data?.message);
+    } catch (err) {
+      return err?.response?.data?.error;
+    }
+  };
+
   // const updateUser = (object: IUpdateData): void => {
   //   let updateData: IUpdateData = {
   //     email: user?.email,
@@ -84,7 +102,16 @@ export const SessionProvider = ({ children }) => {
 
   return (
     <SessionContext.Provider
-      value={{ logged, token, user, signOut, signIn, signUp }}
+      value={{
+        logged,
+        token,
+        user,
+        signOut,
+        signIn,
+        signUp,
+        passwordRecovery,
+        changePassword,
+      }}
     >
       {children}
     </SessionContext.Provider>

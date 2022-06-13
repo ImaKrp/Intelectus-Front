@@ -81,7 +81,7 @@ export const SignIn = () => {
       <Links>
         <span>
           Esqueceu sua senha?{" "}
-          <Link to="/signup" replace>
+          <Link to="/password" replace>
             Clique Aqui
           </Link>
         </span>
