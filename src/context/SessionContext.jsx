@@ -36,9 +36,7 @@ export const SessionProvider = ({ children }) => {
     }
 
     if (!logged)
-      api.defaults.headers.common["Authorization"] = `Bearer ${JSON.parse(
-        token
-      )}`;
+      api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
     setLogged(true);
   }, [user, token, logged]);
@@ -51,11 +49,10 @@ export const SessionProvider = ({ children }) => {
       });
 
       setLogged(true);
-      changeLocalData("@xpense:user", JSON.stringify(data.user));
-      changeLocalData("@xpense:token", JSON.stringify(data.token));
+      changeLocalData("@autistas:User", data.user);
+      changeLocalData("@autistas:Token", data.token);
       setUser(data.user);
       setToken(data.token);
-      alert("Logou putinha");
       api.defaults.headers.common["Authorization"] = `Bearer ${data.token}`;
     } catch (err) {
       return err?.response?.data?.error;

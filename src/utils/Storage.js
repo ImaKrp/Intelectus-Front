@@ -4,7 +4,7 @@ export const getLocalData = (dataName) => {
   return JSON.parse(storedData);
 };
 
-export const changeLocalData = ({ dataName, object }) => {
+export const changeLocalData = (dataName, object) => {
   const parsedObject = JSON.stringify(object);
   localStorage.setItem(dataName, parsedObject);
 };
@@ -19,7 +19,7 @@ export const getSessionData = (dataName) => {
   return JSON.parse(storedData);
 };
 
-export const changeSessionData = ({ dataName, object }) => {
+export const changeSessionData = (dataName, object) => {
   const parsedObject = JSON.stringify(object);
   window.sessionStorage.setItem(dataName, parsedObject);
 };

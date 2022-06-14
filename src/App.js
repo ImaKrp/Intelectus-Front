@@ -1,6 +1,6 @@
 import React from "react";
-import { PublicRoutes } from "./routes/public.routes";
+import { Routes } from "./routes/routes";
 
 export const App = () => {
-  return <PublicRoutes />;
+  return <Routes />;
 };
