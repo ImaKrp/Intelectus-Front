@@ -6,6 +6,7 @@ import { animals as themeItems } from "./themes/themes";
 export const Memory = () => {
   const [errors, setErrors] = useState(0);
   const [prev, setPrev] = useState();
+  const [canClick, setCanClick] = useState(true);
   const [items, setItems] = useState(
     [...themeItems, ...themeItems]
       .map((themeItem) => {
@@ -30,10 +31,12 @@ export const Memory = () => {
     } else {
       items[current].active = true;
       items[prev].active = true;
+      setCanClick((prevValue) => !prevValue);
       setItems([...items]);
       setErrors((prevQtd) => prevQtd + 1);
       setPrev();
       setTimeout(() => {
+        setCanClick((prevValue) => !prevValue);
         items[current].active = false;
         items[prev].active = false;
         setItems([...items]);
@@ -42,6 +45,7 @@ export const Memory = () => {
   };
 
   const handleClick = (id) => {
+    if (!canClick) return;
     if (!prev) {
       items[id].active = true;
       setItems([...items]);
