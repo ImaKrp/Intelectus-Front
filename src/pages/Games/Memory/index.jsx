@@ -46,7 +46,7 @@ export const Memory = () => {
   };
 
   const handleClick = (id) => {
-    if (!canClick) return;
+    if (items[id].active = true || !canClick) return;
     if (!prev) {
       items[id].active = true;
       setItems([...items]);
