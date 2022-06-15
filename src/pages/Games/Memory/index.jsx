@@ -7,22 +7,21 @@ export const Memory = () => {
   const [errors, setErrors] = useState(0);
   const [prev, setPrev] = useState();
   const [canClick, setCanClick] = useState(true);
-  const [items, setItems] = useState(
-    [...themeItems, ...themeItems]
+  const [items, setItems] = useState([
+    undefined,
+    ...[...themeItems, ...themeItems]
       .map((themeItem) => {
         return { ...themeItem, active: false };
       })
-      .sort(() => Math.random() - 0.5)
-  );
+      .sort(() => Math.random() - 0.5),
+  ]);
 
   const isConcluded = !items.find((item) => !item?.active);
 
   console.log(isConcluded);
+  console.log(errors);
 
   const check = (current) => {
-    console.log({ current, prev });
-    console.log(items[current].img, items[prev].img);
-    console.log(items[current].img === items[prev].img);
     if (current !== prev && items[current].img === items[prev].img) {
       items[current].active = true;
       items[prev].active = true;
@@ -56,19 +55,20 @@ export const Memory = () => {
     }
   };
 
-  console.log(errors);
-
   return (
     <Wrapper>
-      <Grid cardsLenght={items?.length}>
-        {items.map((item, index) => (
-          <Card
-            key={index}
-            item={item}
-            handleClick={() => handleClick(index)}
-            active={items[index]?.active}
-          />
-        ))}
+      <Grid cardsLenght={items?.length - 1}>
+        {items.map(
+          (item, index) =>
+            index > 0 && (
+              <Card
+                key={index}
+                item={item}
+                handleClick={() => handleClick(index)}
+                active={items[index]?.active}
+              />
+            )
+        )}
       </Grid>
     </Wrapper>
   );
