@@ -15,6 +15,9 @@ export const Grid = styled.div`
   height: fit-content;
   grid-column-gap: 1.2rem;
   grid-row-gap: 1.4rem;
-  grid-template-columns: repeat(4, 6vw);
-  grid-template-rows: repeat(${({ cardsLenght }) => Number(cardsLenght) / 4}, 8vw);
+  grid-template-columns: repeat(4, 120px);
+  grid-template-rows: repeat(
+    ${({ cardsLenght }) => Number(cardsLenght) / 4},
+    160px
+  );
 `;

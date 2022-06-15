@@ -30,6 +30,14 @@ export const SessionProvider = ({ children }) => {
   };
 
   useEffect(() => {
+    const iniciateApi = async () => {
+      await api.get("/");
+    };
+
+    iniciateApi();
+  }, []);
+
+  useEffect(() => {
     if (!user || !token) {
       signOut();
       return;
