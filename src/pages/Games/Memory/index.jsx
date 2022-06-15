@@ -16,7 +16,9 @@ export const Memory = () => {
       .sort(() => Math.random() - 0.5),
   ]);
 
-  const isConcluded = !items.find((item) => !item?.active);
+  const isConcluded = !items.find((item, i) =>
+    i === 0 ? false : !item?.active
+  );
 
   console.log(isConcluded);
   console.log(errors);
