@@ -3,7 +3,7 @@ import React from "react";
 import { Container } from "./styles";
 import { Aside } from "../components/Aside";
 
-export const Layout = ({ children }) => {
+export const GamesLayout = ({ children }) => {
   return (
     <Container>
       {children}
