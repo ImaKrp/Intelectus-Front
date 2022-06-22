@@ -1,10 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Wrapper, Grid } from "./styles";
 import { Card } from "./components/Card";
 import { animals as themeItems } from "./themes/themes";
+import { useRecord } from "../../../hooks/useRecord";
 
 export const Memory = () => {
-  const [errors, setErrors] = useState(0);
+  const { increaseErrors, setTaskDone, setTask } = useRecord();
+
+  useEffect(() => {
+    setTask({
+      game: "Jogo da Memória",
+      type: "animais",
+    });
+  }, [setTask]);
+
   const [prev, setPrev] = useState();
   const [canClick, setCanClick] = useState(true);
   const [items, setItems] = useState([
@@ -20,8 +29,9 @@ export const Memory = () => {
     i === 0 ? false : !item?.active
   );
 
-  console.log(isConcluded);
-  console.log(errors);
+  useEffect(() => {
+    if (isConcluded) setTaskDone();
+  }, [isConcluded, setTaskDone]);
 
   const check = (current) => {
     if (current !== prev && items[current].img === items[prev].img) {
@@ -34,7 +44,7 @@ export const Memory = () => {
       items[prev].active = true;
       setCanClick((prevValue) => !prevValue);
       setItems([...items]);
-      setErrors((prevQtd) => prevQtd + 1);
+      increaseErrors();
       setPrev();
       setTimeout(() => {
         setCanClick((prevValue) => !prevValue);
