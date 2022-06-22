@@ -5,8 +5,8 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 20px;
-  gap: 16px;
+  padding: 2rem;
+  gap: 1.6rem;
   > div {
     text-transform: capitalize;
     font-size: 1.8rem;

@@ -9,13 +9,13 @@ export const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   background-color: gray;
-  gap: 20px;
+  gap: 2rem;
 `;
 
 export const Selector = styled.div`
-  height: 120px;
-  width: 120px;
-  border-radius: 60px;
+  height: 12rem;
+  width: 12rem;
+  border-radius: 6rem;
   overflow: hidden;
   background-color: white;
 
@@ -32,8 +32,8 @@ export const Selector = styled.div`
       display: flex;
       position: absolute;
       background-color: #000000ad;
-      height: 120px;
-      width: 120px;
+      height: 12rem;
+      width: 12rem;
       align-items: center;
       justify-content: center;
       color: white;
@@ -52,12 +52,12 @@ export const Selector = styled.div`
 
 export const User = styled.div`
   background-color: white;
-  height: 40px;
-  width: 40px;
-  border-radius: 20px;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 2rem;
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: 1rem;
+  right: 2rem;
 
   &:hover > div {
     display: flex;
@@ -69,9 +69,9 @@ export const User = styled.div`
     position: absolute;
     background-color: red;
     height: fit-content;
-    width: 60px;
+    width: 6rem;
     bottom: -1.6rem;
-    left: -10px;
+    left: -1rem;
     border-radius: 0.4rem;
     overflow: hidden;
 

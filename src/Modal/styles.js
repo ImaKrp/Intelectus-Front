@@ -47,8 +47,8 @@ export const ModalUI = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 20px;
-  gap: 16px;
+  padding: 2rem;
+  gap: 1.6rem;
   > div {
     text-transform: capitalize;
     font-size: 1.8rem;
