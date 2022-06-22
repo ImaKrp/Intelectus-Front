@@ -19,7 +19,7 @@ export const Landing = () => {
       </Header>
       <Game id="jogo">
         <div>
-          <img src="http://lorempixel.com.br/160/160/?1" />
+          <img src="http://lorempixel.com.br/160/160/?1" alt="Logo" />
           <button
             type="button"
             onClick={() => {
