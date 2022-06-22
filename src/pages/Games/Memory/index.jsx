@@ -1,18 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { Wrapper, Grid } from "./styles";
 import { Card } from "./components/Card";
-import { animals as themeItems } from "./themes/themes";
+import { themes } from "./themes/themes";
 import { useRecord } from "../../../hooks/useRecord";
-
+import { useParams } from "react-router-dom";
 export const Memory = () => {
   const { increaseErrors, setTaskDone, setTask } = useRecord();
+
+  const { type } = useParams();
 
   useEffect(() => {
     setTask({
       game: "Jogo da Memória",
-      type: "animais",
+      type,
     });
-  }, [setTask]);
+  }, [setTask, type]);
+
+  const themeItems = themes[type];
 
   const [prev, setPrev] = useState();
   const [canClick, setCanClick] = useState(true);

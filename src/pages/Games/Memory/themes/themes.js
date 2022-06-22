@@ -1,4 +1,4 @@
-export const animals = [
+export const animais = [
   { name: "Leão", img: "leao.jpeg" },
   { name: "Urso", img: "urso.jpeg" },
   { name: "Macaco", img: "macaco.jpeg" },
@@ -8,3 +8,7 @@ export const animals = [
   { name: "Tigre", img: "tigre.jpeg" },
   { name: "Jacaré", img: "jacare.jpeg" },
 ];
+
+export const themes = {
+  animais,
+};
