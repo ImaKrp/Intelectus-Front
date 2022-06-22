@@ -49,3 +49,37 @@ export const Selector = styled.div`
     }
   }
 `;
+
+export const User = styled.div`
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+
+  &:hover > div {
+    display: flex;
+  }
+
+  > div {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: red;
+    height: fit-content;
+    width: 60px;
+    bottom: -1.6rem;
+    left: -10px;
+    border-radius: 0.4rem;
+    overflow: hidden;
+
+    > button {
+      width: 100%;
+      height: 2.4rem;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+  }
+`;

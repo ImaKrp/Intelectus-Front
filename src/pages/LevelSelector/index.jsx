@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Levels } from "../../utils/levels/levels";
-import { Container, Selector } from "./styles";
+import { Container, Selector, User } from "./styles";
 import { useRecord } from "../../hooks/useRecord";
+import { useSession } from "../../hooks/useSession";
 
 export const LevelSelector = () => {
   const { setTask } = useRecord();
+  const { signOut } = useSession();
 
   useEffect(() => {
     setTask();
@@ -13,6 +15,13 @@ export const LevelSelector = () => {
 
   return (
     <Container>
+      <User>
+        <div>
+          <button type="button" onClick={signOut}>
+            Sair
+          </button>
+        </div>
+      </User>
       {Levels?.map((level) => (
         <Selector key={`level-${level?.name}`}>
           <Link to={`/memory/${level?.link}`}>
