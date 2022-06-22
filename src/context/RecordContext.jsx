@@ -27,12 +27,12 @@ export const RecordProvider = ({ children }) => {
   }, [seconds, done]);
 
   useEffect(() => {
-    if (task && !done) {
-      setInterval(() => {
-        setSeconds((prev) => prev + 1);
-      }, 1000);
+    if (!task) {
+      setErrors(0);
+      setTime("00:00");
+      setDuration(0);
     }
-  }, [task, done]);
+  }, [task]);
 
   const setTaskDone = () => {
     setDone(true);
@@ -41,24 +41,18 @@ export const RecordProvider = ({ children }) => {
   const increaseErrors = () => {
     setErrors((prev) => prev + 1);
   };
-
-  const clearTaskDone = () => {
-    setTask();
-  };
-
   return (
     <RecordContext.Provider
       value={{
         setTaskDone,
         done,
-        seconds,
         errors,
         increaseErrors,
         setTask,
         time,
         task,
-        clearTaskDone,
         duration,
+        setSeconds,
       }}
     >
       {children}

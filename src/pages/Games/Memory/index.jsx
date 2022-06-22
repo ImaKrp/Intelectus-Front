@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Wrapper, Grid } from "./styles";
 import { Card } from "./components/Card";
-import { themes } from "./themes/themes";
+import { themes } from "../../../utils/themes/themes";
 import { useRecord } from "../../../hooks/useRecord";
 import { useParams } from "react-router-dom";
 export const Memory = () => {
-  const { increaseErrors, setTaskDone, setTask } = useRecord();
+  const {
+    increaseErrors,
+    setTaskDone,
+    setTask,
+    setSeconds: setReduxSeconds,
+  } = useRecord();
 
   const { type } = useParams();
 
@@ -17,7 +22,7 @@ export const Memory = () => {
   }, [setTask, type]);
 
   const themeItems = themes[type];
-
+  const [seconds, setSeconds] = useState(0);
   const [prev, setPrev] = useState();
   const [canClick, setCanClick] = useState(true);
   const [items, setItems] = useState([
@@ -36,6 +41,18 @@ export const Memory = () => {
   useEffect(() => {
     if (isConcluded) setTaskDone();
   }, [isConcluded, setTaskDone]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSeconds((prev) => prev + 1);
+    }, 1000);
+
+    if (isConcluded) clearInterval(interval);
+  }, [isConcluded]);
+
+  useEffect(() => {
+    if (!isConcluded) setReduxSeconds(seconds / 2);
+  }, [seconds, setReduxSeconds, isConcluded]);
 
   const check = (current) => {
     if (current !== prev && items[current].img === items[prev].img) {

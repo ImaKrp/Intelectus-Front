@@ -1,3 +1,12 @@
+export const frutas = [
+  { name: "Banana", img: "banana.jpeg" },
+  { name: "Limão", img: "limao.jpeg" },
+  { name: "Maçã", img: "maca.jpeg" },
+  { name: "Melancia", img: "melancia.jpeg" },
+  { name: "Morango", img: "morango.jpeg" },
+  { name: "Uva", img: "uva.jpeg" },
+];
+
 export const animais = [
   { name: "Leão", img: "leao.jpeg" },
   { name: "Urso", img: "urso.jpeg" },
@@ -9,6 +18,4 @@ export const animais = [
   { name: "Jacaré", img: "jacare.jpeg" },
 ];
 
-export const themes = {
-  animais,
-};
+export const themes = { frutas, animais };
