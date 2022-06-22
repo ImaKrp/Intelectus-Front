@@ -24,7 +24,7 @@ export const LevelSelector = () => {
       </User>
       {Levels?.map((level) => (
         <Selector key={`level-${level?.name}`}>
-          <Link to={`/memory/${level?.link}`}>
+          <Link to={`/memoria/${level?.link}`}>
             <div className="hover">{level?.name}</div>
             <img src={`/images/${level?.img}`} alt={`level-${level?.name}`} />
           </Link>

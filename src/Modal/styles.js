@@ -58,3 +58,12 @@ export const ModalUI = styled.div`
     font-weight: bold;
   }
 `;
+
+export const Restart = styled.button`
+	font-size: 1.8rem;
+	padding: 0.6rem 1rem ;
+	background-color: gray;
+	border-radius: 0.4rem;
+	cursor: pointer;
+	color: white;
+`;
