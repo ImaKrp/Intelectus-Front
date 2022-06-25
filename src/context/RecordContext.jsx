@@ -31,6 +31,7 @@ export const RecordProvider = ({ children }) => {
       setErrors(0);
       setTime("00:00");
       setDuration(0);
+      setDone();
     }
   }, [task]);
 

@@ -4,7 +4,6 @@ import { App } from "./App";
 import GlobalStyleProvider from "./global/globalStyles";
 import { SessionProvider } from "./context/SessionContext";
 import { RecordProvider } from "./context/RecordContext";
-import { Modal } from "./Modal";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -12,9 +11,7 @@ root.render(
     <SessionProvider>
       <RecordProvider>
         <GlobalStyleProvider />
-        <Modal>
-          <App />
-        </Modal>
+        <App />
       </RecordProvider>
     </SessionProvider>
   </React.StrictMode>
