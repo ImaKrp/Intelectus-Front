@@ -1,20 +1,22 @@
 import { gamesThemes } from "../themes/themes";
 
 export const Levels = (gameKey) => {
-  const themes = gamesThemes[gameKey];
-  delete themes.name;
-  delete themes.img;
+  try {
+    const themes = gamesThemes[gameKey];
+    delete themes.name;
+    delete themes.img;
 
-  return Object.keys(themes)?.map((themeKey) => {
-    const themeLength = themes[themeKey]?.length;
-    const name = `${themeKey} (${themeLength})`;
-    const img = themes[themeKey][0]?.img;
-    return {
-      name,
-      img,
-      link: `${gameKey}/${themeKey}`,
-    };
-  });
+    return Object.keys(themes)?.map((themeKey) => {
+      const themeLength = themes[themeKey]?.length;
+      const name = `${themeKey} (${themeLength})`;
+      const img = themes[themeKey][0]?.img;
+      return {
+        name,
+        img,
+        link: `${gameKey}/${themeKey}`,
+      };
+    });
+  } catch (e) {}
 };
 
 export const Games = Object.keys(gamesThemes)?.map((themeKey) => {

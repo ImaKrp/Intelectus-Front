@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Levels, Games } from "../../utils/levels/levels";
-import { useParams } from "react-router-dom";
+import { gamesThemes } from "../../utils/themes/themes";
+import { useParams, useNavigate } from "react-router-dom";
 import { Container, Selector, User } from "./styles";
 import { useRecord } from "../../hooks/useRecord";
 import { useSession } from "../../hooks/useSession";
@@ -10,12 +11,17 @@ export const LevelSelector = () => {
   const { setTask } = useRecord();
   const { signOut } = useSession();
   const { game } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     setTask();
   }, [setTask]);
 
   const toMap = game ? Levels(game) : Games;
+
+  useEffect(() => {
+    if (!gamesThemes[game]) navigate("/", { replace: true });
+  }, [game, navigate]);
 
   return (
     <Container>
