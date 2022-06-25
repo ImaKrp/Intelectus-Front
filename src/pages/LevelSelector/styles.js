@@ -41,6 +41,7 @@ export const Selector = styled.div`
       text-transform: capitalize;
       opacity: 0;
       transition: opacity 0.4s ease-in-out;
+      text-align: center;
     }
 
     > img {

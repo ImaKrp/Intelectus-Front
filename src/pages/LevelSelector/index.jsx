@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Levels } from "../../utils/levels/levels";
+import { Levels, Games } from "../../utils/levels/levels";
+import { useParams } from "react-router-dom";
 import { Container, Selector, User } from "./styles";
 import { useRecord } from "../../hooks/useRecord";
 import { useSession } from "../../hooks/useSession";
@@ -8,10 +9,13 @@ import { useSession } from "../../hooks/useSession";
 export const LevelSelector = () => {
   const { setTask } = useRecord();
   const { signOut } = useSession();
+  const { game } = useParams();
 
   useEffect(() => {
     setTask();
   }, [setTask]);
+
+  const toMap = game ? Levels(game) : Games;
 
   return (
     <Container>
@@ -22,9 +26,9 @@ export const LevelSelector = () => {
           </button>
         </div>
       </User>
-      {Levels?.map((level) => (
+      {toMap?.map((level) => (
         <Selector key={`level-${level?.name}`}>
-          <Link to={`/memory/${level?.link}`}>
+          <Link to={`/${level?.link}`}>
             <div className="hover">{level?.name}</div>
             <img src={`/images/${level?.img}`} alt={`level-${level?.name}`} />
           </Link>

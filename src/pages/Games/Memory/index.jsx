@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Wrapper, Grid } from "./styles";
 import { Card } from "./components/Card";
-import { themes } from "../../../utils/themes/themes";
+import { gamesThemes } from "../../../utils/themes/themes";
 import { useRecord } from "../../../hooks/useRecord";
 import { useParams } from "react-router-dom";
 export const Memory = () => {
@@ -12,7 +12,7 @@ export const Memory = () => {
     setSeconds: setReduxSeconds,
   } = useRecord();
 
-  const { type } = useParams();
+  const { game, type } = useParams();
 
   useEffect(() => {
     setTask({
@@ -21,7 +21,7 @@ export const Memory = () => {
     });
   }, [setTask, type]);
 
-  const themeItems = themes[type];
+  const themeItems = gamesThemes[game][type];
   const [seconds, setSeconds] = useState(0);
   const [prev, setPrev] = useState();
   const [canClick, setCanClick] = useState(true);

@@ -1,4 +1,4 @@
-export const frutas = [
+const frutas = [
   { name: "Banana", img: "banana.jpeg" },
   { name: "Limão", img: "limao.jpeg" },
   { name: "Maçã", img: "maca.jpeg" },
@@ -7,7 +7,7 @@ export const frutas = [
   { name: "Uva", img: "uva.jpeg" },
 ];
 
-export const animais = [
+const animais = [
   { name: "Leão", img: "leao.jpeg" },
   { name: "Urso", img: "urso.jpeg" },
   { name: "Macaco", img: "macaco.jpeg" },
@@ -18,4 +18,13 @@ export const animais = [
   { name: "Jacaré", img: "jacare.jpeg" },
 ];
 
-export const themes = { frutas, animais };
+const memoria = {
+  frutas,
+  animais,
+  name: "Jogo da memória",
+  img: "jacare.jpeg",
+};
+
+export const gamesThemes = {
+  memoria,
+};
