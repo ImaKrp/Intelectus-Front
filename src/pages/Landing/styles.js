@@ -23,7 +23,7 @@ export const Game = styled.section`
   width: 100%;
   display: flex;
   justify-content: center;
-  background: rgb(124, 124, 124);
+  background: #a3cef1;
 
   div {
     display: flex;
@@ -35,16 +35,17 @@ export const Game = styled.section`
   button {
     margin-top: 1.5rem;
     border-radius: 50%;
-    background-color: rgb(187, 187, 187);
+    background-color: #f55e17;
     width: 6rem;
     height: 6rem;
     margin-inline: auto;
-    box-shadow: 0 0.3rem 0.7rem 0 rgb(0, 0, 0);
+    box-shadow: 0 0.3rem 0.7rem 0 rgb(0 0 0 / 40%);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 3rem;
     cursor: pointer;
+    color: #a3cef1;
   }
   img {
     margin-inline: auto;
@@ -55,16 +56,18 @@ export const Game = styled.section`
 
 export const About = styled.section`
   padding: 3rem;
-  height: 40rem;
+  height: 100%;
   width: 100%;
-  background-color: rgba(141, 141, 141, 0.473);
+  background-color: #a3cef1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
   div {
     width: 98%;
     margin-inline: auto;
     padding: 1.4rem;
   }
   h1 {
-    margin-bottom: 0.6rem;
     font-size: 2rem;
     font-weight: 500;
   }

@@ -3,6 +3,7 @@ import { Header, Game, About } from "./styles";
 import { Link } from "react-router-dom";
 import { BsPlayFill } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
+import { Collapse } from "../../components/Collapse";
 
 export const Landing = () => {
   const navigate = useNavigate();
@@ -30,9 +31,8 @@ export const Landing = () => {
           </button>
         </div>
       </Game>
-      <About id="sobre">
-        <div>
-          <h1>Autismo</h1>
+      <About>
+        <Collapse title="Autismo">
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Voluptatibus ipsum incidunt similique reiciendis culpa corporis.
@@ -42,9 +42,8 @@ export const Landing = () => {
             consequatur delectus unde itaque iure odit quis incidunt, qui harum
             blanditiis minima voluptate! Officia nam possimus quisquam!
           </p>
-        </div>
-        <div>
-          <h1>Sindrome de Down</h1>
+        </Collapse>
+        <Collapse title="Sindrome de Down">
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Voluptatibus ipsum incidunt similique reiciendis culpa corporis.
@@ -54,7 +53,7 @@ export const Landing = () => {
             consequatur delectus unde itaque iure odit quis incidunt, qui harum
             blanditiis minima voluptate! Officia nam possimus quisquam!
           </p>
-        </div>
+        </Collapse>
       </About>
     </>
   );
