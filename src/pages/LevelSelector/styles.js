@@ -6,9 +6,18 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  background-color: gray;
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: gray;
   gap: 2rem;
+  flex-wrap: wrap;
+  padding: 0 calc(50vw - 130px);
+  height: fit-content;
 `;
 
 export const Selector = styled.div`

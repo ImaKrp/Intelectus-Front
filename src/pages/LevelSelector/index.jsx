@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Levels, Games } from "../../utils/levels/levels";
 import { gamesThemes } from "../../utils/themes/themes";
 import { useParams, useNavigate } from "react-router-dom";
-import { Container, Selector, User } from "./styles";
+import { Container, Selector, User, Wrapper } from "./styles";
 import { useRecord } from "../../hooks/useRecord";
 import { useSession } from "../../hooks/useSession";
 
@@ -32,14 +32,16 @@ export const LevelSelector = () => {
           </button>
         </div>
       </User>
-      {toMap?.map((level) => (
-        <Selector key={`level-${level?.name}`}>
-          <Link to={`/${level?.link}`}>
-            <div className="hover">{level?.name}</div>
-            <img src={`/images/${level?.img}`} alt={`level-${level?.name}`} />
-          </Link>
-        </Selector>
-      ))}
+      <Wrapper>
+        {toMap?.map((level) => (
+          <Selector key={`level-${level?.name}`}>
+            <Link to={`/${level?.link}`}>
+              <div className="hover">{level?.name}</div>
+              <img src={`/images/${level?.img}`} alt={`level-${level?.name}`} />
+            </Link>
+          </Selector>
+        ))}
+      </Wrapper>
     </Container>
   );
 };
