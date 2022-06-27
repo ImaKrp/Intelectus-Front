@@ -8,7 +8,8 @@ export const Levels = (gameKey) => {
 
     return Object.keys(themes)?.map((themeKey) => {
       const themeLength = themes[themeKey]?.length;
-      const name = `${themeKey} (${themeLength})`;
+      const name =
+        gameKey === "memoria" ? `${themeKey} (${themeLength})` : themeKey;
       const img = themes[themeKey][0]?.img;
       return {
         name,

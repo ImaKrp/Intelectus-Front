@@ -11,9 +11,14 @@ export const Wrapper = styled.header`
 `;
 
 export const NavBack = styled.button`
-  background-color: red;
   height: 30px;
   width: 30px;
   border-radius: 15px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  font-size: 3rem;
+  color: red;
 `;
