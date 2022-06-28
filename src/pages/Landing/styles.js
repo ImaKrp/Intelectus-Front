@@ -74,3 +74,4 @@ export const About = styled.section`
     line-height: 2.2rem;
   }
 `;
+
