@@ -32,10 +32,6 @@ export const Game = styled.section`
     justify-content: center;
   }
 
-  > div {
-    height: calc((100vh - 6.5rem) / 3.5);
-  }
-
   > div > button {
     border-radius: 50%;
     background-color: #f55e17;
