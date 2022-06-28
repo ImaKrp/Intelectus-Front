@@ -49,6 +49,6 @@ export const Image = styled.img`
   max-width: 80%;
   max-height: 80%;
   transition: transform 0.5s;
-  transform: ${({ status }) => (status !== "wrong" ? "scale(1)" : "scale(0)")};
+  transform: ${({ status }) => (status === "wrong" ? "scale(0)" : "scale(1)")};
   animation: 2s ${hideImage} linear;
 `;

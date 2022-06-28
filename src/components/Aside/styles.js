@@ -7,15 +7,26 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   grid-area: Aside;
-  padding: 2rem;
+  padding: 4rem 2rem;
   gap: 1.6rem;
+
   > div {
     text-transform: capitalize;
-    font-size: 1.8rem;
+    font-size: 2rem;
     text-align: center;
   }
 
   .time {
     font-weight: bold;
+    margin: 3rem 0;
+    color: #3a86ff;
+  }
+
+  .errors {
+    color: #ff006e;
+  }
+
+  .task {
+    color: #fb5607;
   }
 `;

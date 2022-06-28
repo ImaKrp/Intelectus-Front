@@ -18,22 +18,25 @@ export const Header = styled.header`
 `;
 
 export const Game = styled.section`
-  padding: 3rem;
-  height: calc(100vh - 6.5rem);
+  min-height: calc(100vh - 6.5rem);
   width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   background: #a3cef1;
 
-  div {
+  > div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    max-width: 18rem;
   }
-  button {
-    margin-top: 1.5rem;
+
+  > div {
+    height: calc((100vh - 6.5rem) / 3.5);
+  }
+
+  > div > button {
     border-radius: 50%;
     background-color: #f55e17;
     width: 6rem;
@@ -48,9 +51,8 @@ export const Game = styled.section`
     color: #a3cef1;
   }
   img {
+    width: 200px;
     margin-inline: auto;
-    max-width: 80%;
-    border-radius: 0.5rem;
   }
 `;
 

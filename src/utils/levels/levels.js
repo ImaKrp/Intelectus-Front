@@ -7,10 +7,10 @@ export const Levels = (gameKey) => {
     delete themes.img;
 
     return Object.keys(themes)?.map((themeKey) => {
-      const themeLength = themes[themeKey]?.length;
+      const themeLength = themes[themeKey].values?.length;
       const name =
         gameKey === "memoria" ? `${themeKey} (${themeLength})` : themeKey;
-      const img = themes[themeKey][0]?.img;
+      const img = themes[themeKey]?.img;
       return {
         name,
         img,

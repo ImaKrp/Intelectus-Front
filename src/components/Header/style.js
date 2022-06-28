@@ -7,7 +7,7 @@ export const Wrapper = styled.header`
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  background-color: gray;
+  background-color: #a3cef1;
 `;
 
 export const NavBack = styled.button`
@@ -20,5 +20,5 @@ export const NavBack = styled.button`
   justify-content: center;
   background-color: transparent;
   font-size: 3rem;
-  color: red;
+  color: #fb5607;
 `;

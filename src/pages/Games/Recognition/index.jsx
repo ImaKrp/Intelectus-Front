@@ -20,7 +20,7 @@ export const Recognition = () => {
 
   useEffect(() => {
     if (!item) {
-      const themeItems = [...gamesThemes[game][type]];
+      const themeItems = [...gamesThemes[game][type].values];
       const actualItem = themeItems.sort(() => Math.random() - 0.5)[0];
       setItem(actualItem);
       const actualItems = [

@@ -8,6 +8,7 @@ export const Container = styled.form`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: #a3cef1;
 `;
 
 export const SpanError = styled.span`
@@ -23,6 +24,7 @@ export const Input = styled.input`
   border-radius: 1rem;
   padding: 0 1rem;
   font-size: 1.4rem;
+  background-color: #a3cef1;
 `;
 
 export const Label = styled.label`
@@ -30,6 +32,7 @@ export const Label = styled.label`
   line-height: 3rem;
   font-weight: 400;
   margin-left: 0.8rem;
+  font-weight: bold;
 `;
 
 export const InputDiv = styled.div`
@@ -39,10 +42,38 @@ export const InputDiv = styled.div`
   flex-direction: column;
 `;
 
+export const PasswordDiv = styled.div`
+  width: 32rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+`;
+
+export const ToggleVisibility = styled.button`
+  width: 1.6rem;
+  height: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 1.2rem;
+  cursor: pointer;
+  background-color: transparent;
+
+  svg {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+`;
+
 export const Submit = styled.button`
   height: 4rem;
   width: 32rem;
-  border: 1px solid black;
+  border: 1px solid #fb5607;
+  background-color: #fb5607;
+  font-weight: bold;
+  color: #a3cef1;
   border-radius: 1rem;
   display: flex;
   align-items: center;
@@ -60,5 +91,9 @@ export const Links = styled.div`
   padding: 1rem;
   span {
     font-size: 1.4rem;
+  }
+  a {
+    color: #fb5607;
+    font-weight: bold;
   }
 `;

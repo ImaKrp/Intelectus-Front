@@ -39,31 +39,42 @@ export const Wrapper = styled.div`
 
 export const ModalUI = styled.div`
   background-color: white;
-  height: 40vh;
-  width: 40vw;
   border-radius: 0.5rem;
   animation: 0.6s ${showModal} linear;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 2rem;
+  padding: 4rem 12rem;
   gap: 1.6rem;
+  color: #fb5607;
   > div {
     text-transform: capitalize;
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .time {
     font-weight: bold;
+    margin: 1rem 0;
+    font-size: 2.4rem;
   }
 `;
 
 export const Restart = styled.button`
-	font-size: 1.8rem;
-	padding: 0.6rem 1rem ;
-	background-color: gray;
-	border-radius: 0.4rem;
-	cursor: pointer;
-	color: white;
+  font-size: 2.4rem;
+  padding: 1rem;
+  background-color: gray;
+  border-radius: 10rem;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Flex = styled.div`
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
+  justify-content: center;
 `;

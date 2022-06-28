@@ -48,20 +48,41 @@ const cores = [
 ];
 
 const memoria = {
-  legumes,
-  animais,
-  frutas,
+  legumes: {
+    img: "legumes.png",
+    values: legumes,
+  },
+  animais: {
+    img: "animais.png",
+    values: animais,
+  },
+  frutas: {
+    img: "frutas.png",
+    values: frutas,
+  },
   name: "Jogo da memória",
-  img: "jacare.jpeg",
+  img: "memoria.png",
 };
 
 const reconhecimento = {
-  formas,
-  cores,
-  frutas,
-  animais,
+  formas: {
+    img: "circulo.jpeg",
+    values: formas,
+  },
+  cores: {
+    img: "vermelho.jpeg",
+    values: cores,
+  },
+  frutas: {
+    img: "maca.jpeg",
+    values: frutas,
+  },
+  animais: {
+    img: "tigre.jpeg",
+    values: animais,
+  },
   name: "Jogo de Reconhecimento",
-  img: "jacare.jpeg",
+  img: "reconhecimento.png",
 };
 
 export const gamesThemes = {

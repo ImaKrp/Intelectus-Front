@@ -6,6 +6,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { Container, Selector, User, Wrapper } from "./styles";
 import { useRecord } from "../../hooks/useRecord";
 import { useSession } from "../../hooks/useSession";
+import { BiUser } from "react-icons/bi";
 
 export const LevelSelector = () => {
   const { setTask } = useRecord();
@@ -26,6 +27,7 @@ export const LevelSelector = () => {
   return (
     <Container>
       <User>
+        <BiUser />
         <div>
           <button
             type="button"

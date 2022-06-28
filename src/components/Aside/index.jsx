@@ -6,10 +6,10 @@ export const Aside = () => {
   const { task, time, errors } = useRecord();
   return (
     <Container>
-      <div>{task?.name}</div>
-      <div>{task?.type}</div>
+      <div className="task">{task?.name}</div>
+      <div className="task">{task?.type}</div>
       <div className="time">{time}</div>
-      <div>Erros: {errors}</div>
+      <div className="errors">Erros: {errors}</div>
     </Container>
   );
 };

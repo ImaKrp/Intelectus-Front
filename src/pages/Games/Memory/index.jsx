@@ -22,7 +22,7 @@ export const Memory = () => {
     });
   }, [setTask, type, game]);
 
-  const themeItems = gamesThemes[game][type];
+  const themeItems = gamesThemes[game][type].values;
   const [seconds, setSeconds] = useState(0);
   const [prev, setPrev] = useState();
   const [canClick, setCanClick] = useState(true);
