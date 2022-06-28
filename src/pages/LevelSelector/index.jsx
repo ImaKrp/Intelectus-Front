@@ -45,7 +45,10 @@ export const LevelSelector = () => {
           <Selector key={`level-${level?.name}`}>
             <Link to={`/${level?.link}`}>
               <div className="hover">{level?.name}</div>
-              <img src={`/images/${level?.img}`} alt={`level-${level?.name}`} />
+              <img
+                src={require(`../../images/${level?.img}`)}
+                alt={`level-${level?.name}`}
+              />
             </Link>
           </Selector>
         ))}
