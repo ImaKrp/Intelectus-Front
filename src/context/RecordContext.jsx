@@ -1,5 +1,5 @@
-import React, { useState, useEffect, createContext } from "react";
-// import { api } from "../api/api";
+import React, { useState, useEffect, createContext, useCallback } from "react";
+import { api } from "../api/api";
 
 const initialState = [];
 export const RecordContext = createContext(initialState);
@@ -11,6 +11,9 @@ export const RecordProvider = ({ children }) => {
   const [task, setTask] = useState();
   const [time, setTime] = useState("00:00");
   const [duration, setDuration] = useState(0);
+  const [submited, setSubmited] = useState(false);
+  const [taskValue, setTaskValue] = useState(0);
+  const [history, setHistory] = useState([]);
 
   useEffect(() => {
     if (!done) {
@@ -32,16 +35,37 @@ export const RecordProvider = ({ children }) => {
       setTime("00:00");
       setDuration(0);
       setDone();
+      setSubmited(false);
+      setTaskValue(0);
     }
   }, [task]);
 
-  const setTaskDone = () => {
+  const submitTaskData = useCallback(async () => {
+    setSubmited(true);
+    const { game, type } = task;
+    const { data } = await api.post("/game/result", {
+      game,
+      type,
+      time: duration,
+      error: errors,
+    });
+    setTaskValue(data.value);
+  }, [duration, errors, task]);
+
+  const setTaskDone = async () => {
     setDone(true);
+    if (!submited) await submitTaskData();
   };
 
   const increaseErrors = () => {
     setErrors((prev) => prev + 1);
   };
+
+  const fetchHistory = useCallback(async () => {
+    const { data } = await api.get("/game/results");
+    setHistory(data);
+  }, []);
+
   return (
     <RecordContext.Provider
       value={{
@@ -54,6 +78,9 @@ export const RecordProvider = ({ children }) => {
         task,
         duration,
         setSeconds,
+        taskValue,
+        fetchHistory,
+        history,
       }}
     >
       {children}

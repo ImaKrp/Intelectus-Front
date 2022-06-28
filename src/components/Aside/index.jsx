@@ -6,7 +6,7 @@ export const Aside = () => {
   const { task, time, errors } = useRecord();
   return (
     <Container>
-      <div>{task?.game}</div>
+      <div>{task?.name}</div>
       <div>{task?.type}</div>
       <div className="time">{time}</div>
       <div>Erros: {errors}</div>

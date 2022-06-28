@@ -6,7 +6,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 export const Modal = ({ children }) => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { task, time, errors, done, setTask } = useRecord();
+  const { task, time, errors, done, setTask, taskValue } = useRecord();
   const resetTask = () => {
     setTask();
     navigate("/", { replace: true });
@@ -19,7 +19,8 @@ export const Modal = ({ children }) => {
       {done && task && (
         <Wrapper>
           <ModalUI>
-            <div>{task?.game}</div>
+            <div>{task?.name}</div>
+            <div>{taskValue}</div>
             <div>{task?.type}</div>
             <div className="time">{time}</div>
             <div>Erros: {errors}</div>

@@ -79,7 +79,7 @@ export const User = styled.div`
     background-color: red;
     height: fit-content;
     width: 6rem;
-    bottom: -1.6rem;
+    top: 3rem;
     left: -1rem;
     border-radius: 0.4rem;
     overflow: hidden;

@@ -40,10 +40,11 @@ export const Recognition = () => {
   const [seconds, setSeconds] = useState(0);
   useEffect(() => {
     setTask({
-      game: "Jogo de Reconhecimento",
+      name: "Jogo de Reconhecimento",
       type,
+      game,
     });
-  }, [setTask, type]);
+  }, [setTask, type, game]);
 
   const isConcluded = !!items.find((item) => item?.status === "right") ?? false;
 

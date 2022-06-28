@@ -27,6 +27,12 @@ export const LevelSelector = () => {
     <Container>
       <User>
         <div>
+          <button
+            type="button"
+            onClick={() => navigate("/historico", { replace: true })}
+          >
+            Historico
+          </button>
           <button type="button" onClick={signOut}>
             Sair
           </button>

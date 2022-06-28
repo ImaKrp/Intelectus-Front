@@ -166,7 +166,7 @@ export const SignUp = () => {
         </PasswordDiv>
         {verifyPasswordError && <SpanError>{verifyPasswordError}</SpanError>}
       </InputDiv>
-      <Submit type="submit">Entrar</Submit>
+      <Submit type="submit">Cadastrar</Submit>
       <Links>
         <span>
           Entre agora{" "}

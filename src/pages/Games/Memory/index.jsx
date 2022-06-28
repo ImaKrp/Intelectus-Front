@@ -16,10 +16,11 @@ export const Memory = () => {
 
   useEffect(() => {
     setTask({
-      game: "Jogo da Memória",
+      name: "Jogo da Memória",
       type,
+      game,
     });
-  }, [setTask, type]);
+  }, [setTask, type, game]);
 
   const themeItems = gamesThemes[game][type];
   const [seconds, setSeconds] = useState(0);
