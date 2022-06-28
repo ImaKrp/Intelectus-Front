@@ -8,11 +8,14 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   grid-area: Game;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.8rem;
 `;
 
 export const Grid = styled.div`
   display: grid;
   grid-column-gap: 1.2rem;
-  grid-template-columns: repeat(3, 12rem);
+  grid-template-columns: repeat(3, 20rem);
   grid-template-rows: 16rem;
 `;

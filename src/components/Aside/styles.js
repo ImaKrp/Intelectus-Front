@@ -12,6 +12,7 @@ export const Container = styled.div`
   > div {
     text-transform: capitalize;
     font-size: 1.8rem;
+    text-align: center;
   }
 
   .time {
