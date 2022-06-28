@@ -46,7 +46,7 @@ export const LevelSelector = () => {
             <Link to={`/${level?.link}`}>
               <div className="hover">{level?.name}</div>
               <img
-                src={`https://github.com/ImaKrp/JogandoAutistas/tree/main/public/images/${level?.img}`}
+                src={`https://raw.githubusercontent.com/ImaKrp/JogandoAutistas/main/public/images//${level?.img}`}
                 alt={`level-${level?.name}`}
               />
             </Link>

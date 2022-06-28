@@ -21,7 +21,7 @@ export const Landing = () => {
         <div></div>
         <div>
           <img
-            src={`https://github.com/ImaKrp/JogandoAutistas/tree/main/public/images/logo.png`}
+            src={`https://raw.githubusercontent.com/ImaKrp/JogandoAutistas/main/public/images//logo.png`}
             alt="Logo"
           />
           <button

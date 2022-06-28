@@ -6,7 +6,7 @@ export const Card = ({ active, item, handleClick }) => {
     <Wrapper active={active} onClick={handleClick}>
       <Image
         active={active}
-        src={`https://github.com/ImaKrp/JogandoAutistas/tree/main/public/images/${item?.img}`}
+        src={`https://raw.githubusercontent.com/ImaKrp/JogandoAutistas/main/public/images//${item?.img}`}
       />
       <span>{item?.name}</span>
     </Wrapper>
