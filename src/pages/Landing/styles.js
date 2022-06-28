@@ -31,7 +31,6 @@ export const Game = styled.section`
     flex-direction: column;
     justify-content: center;
   }
-
   > div > button {
     border-radius: 50%;
     background-color: #f55e17;
