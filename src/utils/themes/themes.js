@@ -22,6 +22,15 @@ const animais = [
   { name: "Jacaré", img: "jacare.jpeg" },
 ];
 
+const legumes = [
+  { name: "Beterraba", img: "beterraba.jpeg" },
+  { name: "Brócolis", img: "brocolis.jpeg" },
+  { name: "Cenoura", img: "cenoura.jpeg" },
+  { name: "Pimentão", img: "pimentao.jpeg" },
+  { name: "Tomate", img: "tomate.jpeg" },
+  { name: "Alface", img: "alface.jpeg" },
+];
+
 const formas = [
   { name: "Círculo", img: "circulo.jpeg" },
   { name: "Quadrado", img: "quadrado.jpeg" },
@@ -39,7 +48,7 @@ const cores = [
 ];
 
 const memoria = {
-  cores,
+  legumes,
   animais,
   frutas,
   name: "Jogo da memória",
