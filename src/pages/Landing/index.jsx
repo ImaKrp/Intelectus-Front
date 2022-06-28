@@ -20,7 +20,10 @@ export const Landing = () => {
       <Game id="jogo">
         <div></div>
         <div>
-          <img src={require("../../images/logo.PNG")} alt="Logo" />
+          <img
+            src={`https://github.com/ImaKrp/JogandoAutistas/tree/main/public/images/logo.png`}
+            alt="Logo"
+          />
           <button
             type="button"
             onClick={() => {
