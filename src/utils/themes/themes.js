@@ -49,19 +49,19 @@ const cores = [
 
 const memoria = {
   legumes: {
-    img: "legumes.png",
+    img: "legumes.PNG",
     values: legumes,
   },
   animais: {
-    img: "animais.png",
+    img: "animais.PNG",
     values: animais,
   },
   frutas: {
-    img: "frutas.png",
+    img: "frutas.PNG",
     values: frutas,
   },
   name: "Jogo da memória",
-  img: "memoria.png",
+  img: "memoria.PNG",
 };
 
 const reconhecimento = {
@@ -82,7 +82,7 @@ const reconhecimento = {
     values: animais,
   },
   name: "Jogo de Reconhecimento",
-  img: "reconhecimento.png",
+  img: "reconhecimento.PNG",
 };
 
 export const gamesThemes = {
