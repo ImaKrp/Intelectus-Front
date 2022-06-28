@@ -20,7 +20,7 @@ export const Landing = () => {
       <Game id="jogo">
         <div></div>
         <div>
-          <img src="/images/logo.png" alt="Logo" />
+          <img src="../../images/logo.png" alt="Logo" />
           <button
             type="button"
             onClick={() => {
