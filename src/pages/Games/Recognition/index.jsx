@@ -48,8 +48,6 @@ export const Recognition = () => {
 
   const isConcluded = !!items.find((item) => item?.status === "right") ?? false;
 
-  console.log(isConcluded, !!items.find((item) => item?.status === "right"));
-
   useEffect(() => {
     const interval = setInterval(() => {
       setSeconds((prev) => prev + 1);
