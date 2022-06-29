@@ -56,6 +56,7 @@ export const Recognition = () => {
     if (isConcluded) clearInterval(interval);
   }, [isConcluded]);
 
+  
   useEffect(() => {
     if (!isConcluded) setReduxSeconds(seconds / 2);
     setReduxSeconds(seconds / 2);
