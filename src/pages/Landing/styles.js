@@ -8,12 +8,19 @@ export const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   font-size: 2rem;
+  background: #a3cef1;
 
   .nav {
     display: flex;
     justify-content: space-between;
     gap: 1.2rem;
     font-size: 1.6rem;
+  }
+
+  a {
+    color: #f55e17;
+    font-weight: bold;
+    text-decoration: underline;
   }
 `;
 
@@ -44,7 +51,7 @@ export const Game = styled.section`
     justify-content: center;
     font-size: 3rem;
     cursor: pointer;
-    color: #a3cef1;
+    color: white;
   }
   img {
     width: 200px;
@@ -74,4 +81,3 @@ export const About = styled.section`
     line-height: 2.2rem;
   }
 `;
-

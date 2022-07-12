@@ -84,7 +84,10 @@ export const Landing = () => {
               estimular as crianças com síndrome de Down e Autismo, além de,
               claro, divertir. Para saber mais sobre a Síndrome de Down acesse
               site da Aldeia 21, associação que acolhe e informa a comunidade
-              sobre a Trissomia do 21. link
+              sobre a Trissomia do 21.{" "}
+              <a href="https://aldeia21.com" target="_blank" rel="noreferrer">
+                Acesse aqui a Aldeia 21
+              </a>
             </p>
           </Collapse>
         </About>

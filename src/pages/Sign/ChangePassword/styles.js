@@ -24,7 +24,7 @@ export const Input = styled.input`
   border-radius: 1rem;
   padding: 0 1rem;
   font-size: 1.4rem;
-  background-color: #a3cef1;
+  background-color: #ffffff5c;
 `;
 
 export const Label = styled.label`
@@ -73,7 +73,7 @@ export const Submit = styled.button`
   border: 1px solid #fb5607;
   background-color: #fb5607;
   font-weight: bold;
-  color: #a3cef1;
+  color: white;
   border-radius: 1rem;
   display: flex;
   align-items: center;
@@ -95,5 +95,6 @@ export const Links = styled.div`
   a {
     color: #fb5607;
     font-weight: bold;
+    text-decoration: underline;
   }
 `;

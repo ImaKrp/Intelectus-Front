@@ -4,6 +4,8 @@ export const Wrapper = styled.div`
   max-height: ${({ active }) => (active ? `450px` : "4.6rem")};
   padding: 0 !important;
   border: 2px solid #f55e17;
+  background: #f55e17;
+  color: white;
   overflow: hidden;
 `;
 
@@ -17,10 +19,11 @@ export const Title = styled.button`
   padding: 0 0.8rem;
   align-items: center;
   justify-content: space-between;
+  color: white;
 
   > h3 {
     font-size: 2.4rem;
-    color: ;
+    cursor: pointer;
   }
 
   > svg {
@@ -33,4 +36,10 @@ export const CollapsedContainer = styled.div`
   max-height: ${({ active }) => (active ? `400px` ?? 0 : 0)};
   transition: max-height 0.6s;
   overflow: hidden;
+
+  a {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+  }
 `;
