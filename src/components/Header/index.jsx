@@ -10,7 +10,11 @@ export const Header = () => {
   return (
     <Wrapper>
       {location.pathname !== "/" ? (
-        <NavBack onClick={() => navigate(-1)}>
+        <NavBack
+          onClick={() => {
+            location.pathname === "/historico" ? navigate("/") : navigate(-1);
+          }}
+        >
           <ImArrowLeft />
         </NavBack>
       ) : (
